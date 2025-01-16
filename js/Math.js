@@ -63,6 +63,7 @@ function checkConvertTo(LeftType, RightType, value, result) {
                 case "Hexa":
                     value = parseInt(value.value,8).toString(16).toUpperCase();
                     result.value = value;
+                    break;
             }
             break;
         case "Binary":
@@ -79,7 +80,9 @@ function checkConvertTo(LeftType, RightType, value, result) {
                 case "Hexa": 
                     value = parseInt(value.value,2).toString(16).toUpperCase();
                     result.value = value;
+                    break;
             }
+            break;
         case "Hexa":
             switch(RightType.value){
                 case "Decimal":
@@ -95,6 +98,7 @@ function checkConvertTo(LeftType, RightType, value, result) {
                     result.value = value;
                     break;
             }
+            break;
     }
     return;
 }
