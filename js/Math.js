@@ -1,4 +1,4 @@
-function checkValue(Type, Input) {
+function checkValue(Type, Input,title) {
     switch (Type) {
         case "Decimal":
             if (!/^[+-]?[0-9]+$/.test(Input)) {
@@ -27,6 +27,11 @@ function checkValue(Type, Input) {
             break;
     }
     return true;
+}
+
+function changeTitle(type,title)
+{
+    return title.textContent = type;
 }
 
 function checkConvertTo(LeftType, RightType, value, result) {
@@ -108,9 +113,19 @@ const RightInput = document.getElementById('RightInput');
 const LeftType = document.getElementById('LeftOption');
 const RightType = document.getElementById('RightOption');
 const ConvertBtn = document.getElementById('convert');
+const leftTitle = document.getElementById('title-left');
+const rightTitle = document.getElementById('title-right');
+
+LeftType.addEventListener('change', function(){
+    changeTitle(this.value,leftTitle);
+});
+
+RightType.addEventListener('change', function(){
+    changeTitle(this.value,rightTitle);
+})
 
 ConvertBtn.addEventListener('click', function () {
-    const result = checkValue(LeftType.value, LeftInput.value);
+    const result = checkValue(LeftType.value, LeftInput.value,title);
 
     if (LeftType.value === RightType.value) {
         alert('Type is Same, Please Change To Another Type');

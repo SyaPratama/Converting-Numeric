@@ -133,6 +133,11 @@ body{
         background: none;
         box-shadow: none;
         text-align: center;
+        flex-wrap: wrap;
+    }
+
+    #title{
+        margin-bottom: 25px;
     }
 
     .input-numeric-category{
