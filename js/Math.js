@@ -5,22 +5,26 @@ function checkValue(Type, Input) {
                 alert('Value Is Not Decimal')
                 return false;
             }
+            break;
         case "Octal":
             if (!/^[0-7]+$/.test(Input)) {
                 alert('Value Is Not Octal')
                 return false;
             }
+            break;
         case "Binary":
             if (!/^[01]+$/.test(Input)) {
                 alert('Value Is Not Biner');
                 return false;
             }
+            break;
         case "Hexa":
             if(!/^[0-9a-fA-F]+$/.test(Input))
             {
                 alert('Value Is Not Hexa');
                 return false;
             }
+            break;
     }
     return true;
 }
