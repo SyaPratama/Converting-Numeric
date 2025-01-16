@@ -44,7 +44,7 @@ function checkConvertTo(LeftType, RightType, value, result) {
                     result.value = Biner;
                     break;
                 case "Hexa":
-                    value = value.value.toString(16).toUpperCase();
+                    value = parseInt(value.value).toString(16).toUpperCase();
                     result.value = value;
                     break;
             }
