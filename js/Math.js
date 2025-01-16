@@ -1,4 +1,4 @@
-function checkValue(Type, Input,title) {
+function checkValue(Type, Input) {
     switch (Type) {
         case "Decimal":
             if (!/^[+-]?[0-9]+$/.test(Input)) {
@@ -126,7 +126,7 @@ RightType.addEventListener('change', function(){
 })
 
 ConvertBtn.addEventListener('click', function () {
-    const result = checkValue(LeftType.value, LeftInput.value,title);
+    const result = checkValue(LeftType.value, LeftInput.value);
 
     if (LeftType.value === RightType.value) {
         alert('Type is Same, Please Change To Another Type');
