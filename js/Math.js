@@ -31,6 +31,7 @@ function checkValue(Type, Input,title) {
 
 function changeTitle(type,title)
 {
+    type = type === "Hexa" ? "Hexadecimal" : type;
     return title.textContent = type;
 }
 
