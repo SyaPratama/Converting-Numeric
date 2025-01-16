@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Binery Numeric</title>
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="css/style.css">
+
+     <!-- FONT AWESOME -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Converter Numeric</h1>
+        <div class="input-numeric-category">
+            <div class="left-category">
+                <select id="LeftOption">
+                    <option value="Decimal" selected>Decimal</option>
+                    <option value="Octal">Octal</option>
+                    <option value="Binary">Binary</option>
+                    <option value="Hexa">Hexadecimal</option>
+                </select>
+                <input type="text" inputmode="numeric" id="LeftInput">
+            </div>
+            <i class="fa-solid fa-arrows-left-right"></i>
+            <div class="right-category">
+                <select id="RightOption">
+                    <option value="Decimal">Decimal</option>
+                    <option value="Octal">Octal</option>
+                    <option value="Binary" selected>Binary</option>
+                    <option value="Hexa">Hexadecimal</option>
+                </select>
+                <input type="text" inputmode="numeric" id="RightInput" readonly>  
+            </div>
+        </div>
+        <div class="label-convert-btn">
+            <button id="convert" type="button">Convert</button>
+        </div>
+    </div>
+
+    <script src="js/Math.js"></script>
+</body>
+</html>
